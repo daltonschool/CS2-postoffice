@@ -4,7 +4,7 @@ Using the ACSL specification included, complete the post office assignment.
 
 You will write your code in the ACSLPostOffice.java class, using the functions that are sketched out therein.
 
-You should complete this assignment in pairs, using the [standard pair coding rules]()
+You should complete this assignment in pairs, using the [standard pair coding rules]().  Pairs to be assigned by the TA.
 
 clone the repository here:
 
