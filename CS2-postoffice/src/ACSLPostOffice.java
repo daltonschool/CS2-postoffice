@@ -8,6 +8,8 @@ import java.util.Scanner;
  */
 public class ACSLPostOffice {
 
+	//HINT: you probably don't need to modify anything in the main
+	
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		//declarations:
@@ -25,6 +27,8 @@ public class ACSLPostOffice {
 		}
 	}
 
+	//HINT: all your work should probably be underneath this line
+	
 	/**
 	 * solve for a specific input
 	 * @param s the input
@@ -32,6 +36,7 @@ public class ACSLPostOffice {
 	 */
 	static String solve(String s) {
 		return s;
+		//HINT: you might want to look at Parsing.java
 	}
 	
 	/**
@@ -71,7 +76,7 @@ public class ACSLPostOffice {
 	 * @return the cost of postage
 	 */
 	double calculate(String type, int dist) {
-		return 0;
+		return 0; //HINT: this function is going to call a bunch of others, write it last?
 	}
 	
 }
