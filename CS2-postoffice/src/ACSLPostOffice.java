@@ -75,7 +75,7 @@ public class ACSLPostOffice {
 	 * @param dist the number of zones through with the mail must travel
 	 * @return the cost of postage
 	 */
-	double calculate(String type, int dist) {
+	static double calculate(String type, int dist) {
 		return 0; //HINT: this function is going to call a bunch of others, write it last?
 	}
 	
