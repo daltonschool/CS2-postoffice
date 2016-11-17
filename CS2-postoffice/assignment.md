@@ -6,6 +6,7 @@ You will write your code in the ACSLPostOffice.java class, using the functions t
 
 
 clone the repository here:
+https://github.com/daltonschool/CS2-postoffice.git
 
 ### Assessment
 
