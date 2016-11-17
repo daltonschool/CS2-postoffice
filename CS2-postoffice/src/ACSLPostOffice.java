@@ -4,7 +4,7 @@ import java.io.FileReader;
 import java.util.Scanner;
 
 /**
- * Post office assignment
+ * Post office assignment.
  * 
  * @author cforster
  */
@@ -42,37 +42,44 @@ public class ACSLPostOffice {
 	 *            the input
 	 * @return the output
 	 */
-	static String solve(String s) {
-		return s;
+	public static String solve(String s) {
 		// HINT: Look at ParsingExample.java
+		return s;
 	}
 
-    /**
-     * Take a zip code and return the zone that it is from 
-     * based on this table.
-     * 
-     * ZONE	   1	   2	   3	   4	   5	   6
-     * FROM	00001	07000	20000	36000	63000	85000
-     * TO	06999	19999	35999	62999	84999	99999
-     * 
-     * @param zip
-     *            a 5 digit zip code
-     * @return the zone corresponding to the zip code
-     */
-	static int zipToZone(int zip) {
+	/**
+	 * Take a zip code and return the zone that it is from based on this table.
+	 * 
+	 * Zone 1 is from zip code 00001 to 06999.
+	 * 
+	 * Zone 2 is from zip code 07000 to 19999.
+	 * 
+	 * Zone 3 is from zip code 20000 to 35999.
+	 * 
+	 * Zone 4 is from zip code 36000 to 62999.
+	 * 
+	 * Zone 5 is from zip code 63000 to 84999.
+	 * 
+	 * Zone 6 is from zip code 85000 to 99999.
+	 * 
+	 * @param zip
+	 *            a 5 digit zip code
+	 * @return the zone corresponding to the zip code
+	 */
+	public static int zipToZone(int zip) {
 		return 0;
 	}
 
 	/**
 	 * Compute the distance between zones.
 	 * 
-	 * @param zone1
-	 *            origin
-	 * @param zone2
-	 *            destination
+	 * @param originZone
+	 *            zone of sender
+	 * @param destinationZone
+	 *            zone of receiver
 	 * @return the distance between zones
 	 */
-	static int zoneDist(int zone1, int zone2) {
+	public static int zoneDist(int originZone, int destinationZone) {
 		return 0;
 	}
 
@@ -101,14 +108,14 @@ public class ACSLPostOffice {
 	 * 
 	 * Package:
 	 * 
-	 * Length > 24 in. or Height > 18 in. or Thickness > .5 and Length +
-	 * distance around less than or equal to 84 in.
+	 * Length more than 24 in. or Height more than 18 in. or Thickness more than
+	 * .5 and also the Length + distance around is at most 84 in.
 	 * 
 	 * 
 	 * Large Package:
 	 * 
-	 * Length > 24 in. or Height > 18 in. or Thickness > .5 and Length +
-	 * distance around 84 in. - 130 in.
+	 * Length more than 24 in. or Height more than 18 in. or Thickness more than
+	 * .5 and Length + distance is more than 84 in. but less than 130 in.
 	 * 
 	 * 
 	 * Unmailable:
@@ -116,14 +123,14 @@ public class ACSLPostOffice {
 	 * Doesn’t fit any above requirements
 	 * 
 	 * @param length
-	 *            length of envelope/package
+	 *            length of parcel
 	 * @param width
-	 *            width of envelope/package
+	 *            width of parcel
 	 * @param height
-	 *            height (or depth) of package
+	 *            height (or depth) of parcel
 	 * @return the mail type
 	 */
-	static String mailType(double length, double width, double height) {
+	public static String mailType(double length, double width, double height) {
 		return "";
 	}
 
@@ -136,7 +143,7 @@ public class ACSLPostOffice {
 	 *            the number of zones through with the mail must travel
 	 * @return the cost of postage
 	 */
-	static double calculateCost(String type, int dist) {
+	public static double calculateCost(String type, int dist) {
 		return 0; // HINT: this function is going to call a bunch of others,
 					// write it last?
 	}
