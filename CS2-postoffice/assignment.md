@@ -4,13 +4,15 @@ Using the ACSL specification included, complete the post office assignment.
 
 You will write your code in the ACSLPostOffice.java class, using the functions that are sketched out therein.
 
-You should complete this assignment in pairs, using the [standard pair coding rules]().  Pairs to be assigned by the TA.
 
 clone the repository here:
 
 ### Assessment
 
-* 5 points will be awarded for correct sample input and output
-* 5 points will be awarded for correct input and output on secret test data, which will never be revealed to you.
-* -1 point for each provided function that is not used
+* 74 points for on time
+* 15 points for sample data (3 points each)
+* 3 points documentation
+* 3 points style (variables, formatting, warnings)
 
+
+https://github.com/daltonschool/CS2-postoffice/blob/master/CS2-postoffice/assignment.md
