@@ -4,7 +4,21 @@ import java.io.FileReader;
 import java.util.Scanner;
 
 /**
- * Post office assignment.
+ * Post office assignment. Print the price of postage for various parcels. For
+ * details read ACSL_Post_Office.pdf. Also see the comments above the functions
+ * below.
+ * 
+ * Note: Decimals must be rounded to 2 places.
+ * 
+ * GRADING GUIDE:
+ * 
+ * 74 points for on time
+ * 
+ * 15 points for sample data (3 points each)
+ * 
+ * 3 points documentation
+ * 
+ * 3 points style (variables, formatting, warnings)
  * 
  * @author cforster
  */
@@ -20,31 +34,35 @@ public class ACSLPostOffice {
 	public static void main(String[] args) {
 		// declarations:
 		Scanner scan;
+		String input = "";
 		try {
+			// scan from the file named 'testdata'
 			scan = new Scanner(new BufferedReader(new FileReader("testdata")));
 		} catch (FileNotFoundException e) {
-			// switch to regular terminal input
+			// if I can't find the file switch to regular terminal input
 			scan = new Scanner(System.in);
 		}
 
 		// main loop:
 		while (scan.hasNext()) {
-			System.out.println(solve(scan.nextLine()));
+			input = scan.nextLine();
+			System.out.println(getPrice(input));
 		}
 	}
 
 	// HINT: all your work should probably be underneath this line
 
 	/**
-	 * Solve for a specific input.
+	 * Compute the price of mailing the parcel.
 	 * 
 	 * @param s
-	 *            the input
-	 * @return the output
+	 *            a comma-delimited string with the size of the parcel and the
+	 *            to and from zip codes
+	 * @return the price to send the parcel or UNMAILABLE
 	 */
-	public static String solve(String s) {
+	public static String getPrice(String s) {
 		// HINT: Look at ParsingExample.java
-		return s;
+		return "UNMAILABLE";
 	}
 
 	/**
@@ -86,41 +104,24 @@ public class ACSLPostOffice {
 	/**
 	 * Get mail classification of the object based on size.
 	 * 
-	 * Post Card:
+	 * Types:
 	 * 
-	 * Length 3.5 - 4.25 in. / Height 3.5 - 6 in. / Thickness .007 - .016 in.
+	 * POST CARD: Length 3.5 - 4.25in / Height 3.5 - 6in / Thick .007 - .016in
 	 * 
+	 * LARGE POST CARD: Length 4.25-6in / Height 6-11.5in / Thick .007 - .015 in
 	 * 
-	 * Large Post Card:
+	 * ENVELOPE: Length 3.5-6.125 in / Height 5-11.5 in / Thick .016-.25 in
 	 * 
-	 * Length 4.25 - 6 in. / Height 6 - 11.5 in. / Thickness .007 - .015 in.
+	 * LARGE ENVELOPE: Length 6.125-24 in / Height 11-18 in / Thick .25 - .5 in
 	 * 
+	 * PACKAGE: Length more than 24 in. or Height more than 18 in. or Thickness
+	 * more than .5 and also the Length + distance around is at most 84 in.
 	 * 
-	 * Envelope:
+	 * LARGE PACKAGE: Length more than 24 in. or Height more than 18 in. or
+	 * Thickness more than .5 and Length + distance is more than 84 in. but less
+	 * than 130 in.
 	 * 
-	 * Length 3.5 - 6.125 in. / Height 5-11.5 in. / Thickness .016 - .25 in.
-	 * 
-	 * 
-	 * Large Envelope:
-	 * 
-	 * Length 6.125 - 24 in / Height 11 - 18 in / Thickness .25 - .5
-	 * 
-	 * 
-	 * Package:
-	 * 
-	 * Length more than 24 in. or Height more than 18 in. or Thickness more than
-	 * .5 and also the Length + distance around is at most 84 in.
-	 * 
-	 * 
-	 * Large Package:
-	 * 
-	 * Length more than 24 in. or Height more than 18 in. or Thickness more than
-	 * .5 and Length + distance is more than 84 in. but less than 130 in.
-	 * 
-	 * 
-	 * Unmailable:
-	 * 
-	 * Doesn’t fit any above requirements
+	 * UNMAILABLE: Doesn’t fit any above requirements.
 	 * 
 	 * @param length
 	 *            length of parcel
@@ -130,12 +131,24 @@ public class ACSLPostOffice {
 	 *            height (or depth) of parcel
 	 * @return the mail type
 	 */
-	public static String mailType(double length, double width, double height) {
+	public static String getMailType(double length, double width, double height) {
 		return "";
 	}
 
 	/**
 	 * Calculate the cost of postage based on a mail type and a zone distance.
+	 * 
+	 * POST CARD = $.20 + .03 per zone
+	 * 
+	 * LARGE POST CARD = $.37 + .03 per zone
+	 * 
+	 * ENVELOPE = $.37 + .04 per zone
+	 * 
+	 * LARGE ENVELOPE = $.60 + .05 per zone
+	 * 
+	 * PACKAGE = $2.95 + .25 per zone
+	 * 
+	 * LARGE PACKAGE = $3.95 + .35 per zone
 	 * 
 	 * @param type
 	 *            the type of mail
