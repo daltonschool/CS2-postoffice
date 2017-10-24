@@ -40,15 +40,17 @@ public class PostageCalculator {
 	/**
 	 * Compute the price of mailing the parcel.
 	 * 
-	 * @param s - a comma-delimited string with the size of the parcel and the
+	 * @param s - String, a comma-delimited string with the size of the parcel and the
 	 *            to and from zip codes
-	 * @return the price or UNMAILABLE
+	 * @return String, the price or UNMAILABLE
 	 */
 	public static String getPrice(String s) {
-		// HINT: This method always returns UNMAILABLE, but that's not right.  
-		// Fix this function so it computes the price. 
-		// Finish the helper functions calculateCost and use it.  
-		return "UNMAILABLE";
+		// HINT: This method returns a blank String, but that's not right.  
+		// Fix this function so it calls calculateCost() to get the price.
+		// If calculateCost returns -1, this function should return "UNMAILABLE"
+		// but if calculateCode returns any other double, convert it to a String
+		// and return it.
+		return "";
 	}
 	
 	/**
@@ -61,15 +63,18 @@ public class PostageCalculator {
 	 * PACKAGE = $2.95 + .25 per zone
 	 * LARGE PACKAGE = $3.95 + .35 per zone
 	 * 
-	 * @param type - the type of mail (String)
-	 * @param dist - the number of zones through with the mail must travel (int)
-	 * @return the cost of postage or -1 if it's unmailable (double)
+	 * @param type - String, the type of mail
+	 * @param dist - int, the number of zones through with the mail must travel
+	 * @return double, the cost of postage or -1 if it's unmailable
 	 */
 	public static double calculateCost(String type, int dist) {
+		// HINT: This function always returns 0 but that's not right. 
+		// Use the helper functions getZoneDistance and getMailType
+		// and use those return values to compute the cost.
 		return 0; 
 	}
 	
-		/**
+	/**
 	 * Get mail classification of the object based on size.
 	 * 
 	 * POST CARD: Length 3.5 - 4.25in / Height 3.5 - 6in / Thick .007 - .016in
@@ -89,6 +94,9 @@ public class PostageCalculator {
 	 * @return String, the mail type
 	 */
 	public static String getMailType(double length, double width, double height) {
+		// Hint: This method always returns the blank String, but that's not right.
+		// Fix it so that it returns the mail type based in its length, width and height.
+		// You don't need a helper function for this.
 		return "";
 	}
 	
@@ -100,6 +108,10 @@ public class PostageCalculator {
 	 * @return the distance between zones
 	 */
 	public static int getZoneDistance(int originZone, int destinationZone) {
+		// HINT: This function always returns 0 but that's not right.
+		// Fix it so it returns the distance between the origin zone
+		// and the destination zone. 
+		// You don't need a helper function for this.
 		return 0;
 	}
 
@@ -117,6 +129,8 @@ public class PostageCalculator {
 	 * @return the zone corresponding to the zip code
 	 */
 	public static int convertZipToZone(int zip) {
+		// HINT: This always return 0 but that's not right.
+		// Fix it so that it returns the correct zone based on the zip.
 		return 0;
 	}
 
