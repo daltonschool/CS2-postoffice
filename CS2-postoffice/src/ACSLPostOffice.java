@@ -47,39 +47,29 @@ public class PostageCalculator {
 	public static String getPrice(String s) {
 		// HINT: This method always returns UNMAILABLE, but that's not right.  
 		// Fix this function so it computes the price. 
-		// Use the helper functions zipToZone,  
+		// Finish the helper functions calculateCost and use it.  
 		return "UNMAILABLE";
 	}
-
+	
 	/**
-	 * Take a zip code and return the zone that it is from based on this table.
+	 * Calculate the cost of postage based on a mail type and a zone distance.
 	 * 
-	 * Zone 1 is from zip code 00001 to 06999.
-	 * Zone 2 is from zip code 07000 to 19999.
-	 * Zone 3 is from zip code 20000 to 35999.
-	 * Zone 4 is from zip code 36000 to 62999.
-	 * Zone 5 is from zip code 63000 to 84999.
-	 * Zone 6 is from zip code 85000 to 99999.
+	 * POST CARD = $.20 + .03 per zone
+	 * LARGE POST CARD = $.37 + .03 per zone
+	 * ENVELOPE = $.37 + .04 per zone
+	 * LARGE ENVELOPE = $.60 + .05 per zone
+	 * PACKAGE = $2.95 + .25 per zone
+	 * LARGE PACKAGE = $3.95 + .35 per zone
 	 * 
-	 * @param zip - int, a 5 digit zip code
-	 * @return the zone corresponding to the zip code
+	 * @param type - the type of mail (String)
+	 * @param dist - the number of zones through with the mail must travel (int)
+	 * @return the cost of postage or -1 if it's unmailable (double)
 	 */
-	public static int convertZipToZone(int zip) {
-		return 0;
+	public static double calculateCost(String type, int dist) {
+		return 0; 
 	}
-
-	/**
-	 * Compute the distance between zones.
-	 * 
-	 * @param originZone - zone of sender
-	 * @param destinationZone - zone of receiver
-	 * @return the distance between zones
-	 */
-	public static int getZoneDistance(int originZone, int destinationZone) {
-		return 0;
-	}
-
-	/**
+	
+		/**
 	 * Get mail classification of the object based on size.
 	 * 
 	 * POST CARD: Length 3.5 - 4.25in / Height 3.5 - 6in / Thick .007 - .016in
@@ -101,24 +91,33 @@ public class PostageCalculator {
 	public static String getMailType(double length, double width, double height) {
 		return "";
 	}
+	
+	/**
+	 * Compute the distance between zones.
+	 * 
+	 * @param originZone - zone of sender
+	 * @param destinationZone - zone of receiver
+	 * @return the distance between zones
+	 */
+	public static int getZoneDistance(int originZone, int destinationZone) {
+		return 0;
+	}
 
 	/**
-	 * Calculate the cost of postage based on a mail type and a zone distance.
+	 * Take a zip code and return the zone that it is from based on this table.
 	 * 
-	 * POST CARD = $.20 + .03 per zone
-	 * LARGE POST CARD = $.37 + .03 per zone
-	 * ENVELOPE = $.37 + .04 per zone
-	 * LARGE ENVELOPE = $.60 + .05 per zone
-	 * PACKAGE = $2.95 + .25 per zone
-	 * LARGE PACKAGE = $3.95 + .35 per zone
+	 * Zone 1 is from zip code 00001 to 06999.
+	 * Zone 2 is from zip code 07000 to 19999.
+	 * Zone 3 is from zip code 20000 to 35999.
+	 * Zone 4 is from zip code 36000 to 62999.
+	 * Zone 5 is from zip code 63000 to 84999.
+	 * Zone 6 is from zip code 85000 to 99999.
 	 * 
-	 * @param type - String, the type of mail
-	 * @param dist - int, the number of zones through with the mail must travel
-	 * @return double, the cost of postage
+	 * @param zip - int, a 5 digit zip code
+	 * @return the zone corresponding to the zip code
 	 */
-	public static double calculateCost(String type, int dist) {
-		return 0; // HINT: this function is going to call a bunch of others,
-					// write it last?
+	public static int convertZipToZone(int zip) {
+		return 0;
 	}
 
 }
