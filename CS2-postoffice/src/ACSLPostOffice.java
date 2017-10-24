@@ -13,12 +13,12 @@ public class PostageCalculator {
 	/*******************************
 	 * HINT: Don't modify anything in the main
 	 * 
-	 * @param args - not used
+	 * @param args - String[], not used
 	 ********************************/
 	public static void main(String[] args) {
 
 		String packageDetails = "";
-		int price = 0;
+		String price = "";
 		
 		try {
 			// Point scanner to a file named 'testdata'
@@ -31,7 +31,11 @@ public class PostageCalculator {
 		// Read each line of package data and print the cost
 		while (scan.hasNext()) {
 			packageDetails = scan.nextLine();
-			price = getPrice(packageDetails);  /* HINT: Finish writing the getPrice method. */
+			
+			// HINT: This always equals a blank line but that's not right.
+			// Fix getPrice so it returns the price of the package.
+			price = getPrice(packageDetails);  
+			
 			System.out.println(price);
 		}
 	}
@@ -47,8 +51,8 @@ public class PostageCalculator {
 	public static String getPrice(String s) {
 		// HINT: This method returns a blank String, but that's not right.  
 		// Fix this function so it calls calculateCost() to get the price.
-		// If calculateCost returns -1, this function should return "UNMAILABLE"
-		// but if calculateCode returns any other double, convert it to a String
+		// If calculateCost() returns -1, return "UNMAILABLE", but if 
+		// calculateCost() returns any other double, convert it to a String
 		// and return it.
 		return "";
 	}
@@ -69,8 +73,9 @@ public class PostageCalculator {
 	 */
 	public static double calculateCost(String type, int dist) {
 		// HINT: This function always returns 0 but that's not right. 
-		// Use the helper functions getZoneDistance and getMailType
-		// and use those return values to compute the cost.
+		// Use the helper functions getZoneDistance() and getMailType()
+		// and use those return values to compute the cost according to
+		// the specifications in the comments.
 		return 0; 
 	}
 	
@@ -94,7 +99,7 @@ public class PostageCalculator {
 	 * @return String, the mail type
 	 */
 	public static String getMailType(double length, double width, double height) {
-		// Hint: This method always returns the blank String, but that's not right.
+		// HINT: This method always returns the blank String, but that's not right.
 		// Fix it so that it returns the mail type based in its length, width and height.
 		// You don't need a helper function for this.
 		return "";
@@ -131,6 +136,7 @@ public class PostageCalculator {
 	public static int convertZipToZone(int zip) {
 		// HINT: This always return 0 but that's not right.
 		// Fix it so that it returns the correct zone based on the zip.
+		// You don't need a helper function for this.
 		return 0;
 	}
 
