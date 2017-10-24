@@ -64,7 +64,7 @@ public class PostageCalculator {
 	 * @param zip - int, a 5 digit zip code
 	 * @return the zone corresponding to the zip code
 	 */
-	public static int zipToZone(int zip) {
+	public static int convertZipToZone(int zip) {
 		return 0;
 	}
 
@@ -75,7 +75,7 @@ public class PostageCalculator {
 	 * @param destinationZone - zone of receiver
 	 * @return the distance between zones
 	 */
-	public static int zoneDist(int originZone, int destinationZone) {
+	public static int getZoneDistance(int originZone, int destinationZone) {
 		return 0;
 	}
 
