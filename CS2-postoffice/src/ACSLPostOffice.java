@@ -13,10 +13,8 @@ public class PostageCalculator {
 	/*******************************
 	 * HINT: Don't modify anything in the main
 	 * 
-	 * @param args
-	 *            not used
-	 */
-	@SuppressWarnings("resource")
+	 * @param args - not used
+	 ********************************/
 	public static void main(String[] args) {
 
 		String packageDetails = "";
@@ -42,8 +40,7 @@ public class PostageCalculator {
 	/**
 	 * Compute the price of mailing the parcel.
 	 * 
-	 * @param s
-	 *            a comma-delimited string with the size of the parcel and the
+	 * @param s - a comma-delimited string with the size of the parcel and the
 	 *            to and from zip codes
 	 * @return the price or UNMAILABLE
 	 */
@@ -64,8 +61,7 @@ public class PostageCalculator {
 	 * Zone 5 is from zip code 63000 to 84999.
 	 * Zone 6 is from zip code 85000 to 99999.
 	 * 
-	 * @param zip
-	 *            a 5 digit zip code
+	 * @param zip - int, a 5 digit zip code
 	 * @return the zone corresponding to the zip code
 	 */
 	public static int zipToZone(int zip) {
@@ -75,10 +71,8 @@ public class PostageCalculator {
 	/**
 	 * Compute the distance between zones.
 	 * 
-	 * @param originZone
-	 *            zone of sender
-	 * @param destinationZone
-	 *            zone of receiver
+	 * @param originZone - zone of sender
+	 * @param destinationZone - zone of receiver
 	 * @return the distance between zones
 	 */
 	public static int zoneDist(int originZone, int destinationZone) {
@@ -99,13 +93,10 @@ public class PostageCalculator {
 	 * than 130 in.
 	 * UNMAILABLE: Doesn’t fit any above requirements.
 	 * 
-	 * @param length
-	 *            length of parcel
-	 * @param width
-	 *            width of parcel
-	 * @param height
-	 *            height (or depth) of parcel
-	 * @return the mail type
+	 * @param length - double, length of parcel
+	 * @param width - double, width of parcel
+	 * @param height - double, height (or depth) of parcel
+	 * @return String, the mail type
 	 */
 	public static String getMailType(double length, double width, double height) {
 		return "";
@@ -121,11 +112,9 @@ public class PostageCalculator {
 	 * PACKAGE = $2.95 + .25 per zone
 	 * LARGE PACKAGE = $3.95 + .35 per zone
 	 * 
-	 * @param type
-	 *            the type of mail
-	 * @param dist
-	 *            the number of zones through with the mail must travel
-	 * @return the cost of postage
+	 * @param type - String, the type of mail
+	 * @param dist - int, the number of zones through with the mail must travel
+	 * @return double, the cost of postage
 	 */
 	public static double calculateCost(String type, int dist) {
 		return 0; // HINT: this function is going to call a bunch of others,
