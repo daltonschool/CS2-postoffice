@@ -33,7 +33,7 @@ public class PostageCalculator {
 			packageDetails = scan.nextLine();
 			
 			// HINT: This always equals a blank line but that's not right.
-			// Fix getPrice so it returns the price of the package.
+			// Fix getPrice() so it returns the price of the package.
 			price = getPrice(packageDetails);  
 			
 			System.out.println(price);
