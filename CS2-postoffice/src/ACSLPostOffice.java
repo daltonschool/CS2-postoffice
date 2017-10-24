@@ -5,8 +5,6 @@ import java.util.Scanner;
 
 /**
  * GOAL: Print the price of postage for various parcels. 
- * 
- * Note: Decimals must be rounded to 2 places.
  */
 public class PostageCalculator {
 
